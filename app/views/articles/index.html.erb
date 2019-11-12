@@ -1,0 +1,11 @@
+<h1>Article list</h1>
+<%= link_to "Add a new article", new_article_path  %>
+<p>Find below the list of articles</p>
+<% @articles.each do |article| %>
+<ul><li><strong>
+<%= article.title.capitalize  %>
+</strong>
+<br>
+<%= link_to "Click here for more details", article_path(article)  %>
+</li></ul>
+<% end %>
